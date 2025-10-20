@@ -118,17 +118,15 @@ export async function POST(request: NextRequest) {
     // Build context from profile
     const context = buildContext(message, documents)
 
-    // Check if Groq is available
-    if (!process.env.GROQ_API_KEY) {
-      // Fallback to basic response
-      return NextResponse.json({
-        response: context === "No specific information found in Catherine's profile."
-          ? "I don't have specific information about that in my profile. Could you ask about my work experience, technical skills, education, or leadership roles?"
-          : `Here's what I found in my profile:\n\n${context}\n\nWould you like to know more about any specific aspect?`
-      })
-    }
-
-    // Build messages for Groq
+        // Check if Groq is available
+        if (!process.env.GROQ_API_KEY) {
+          // Fallback to basic response
+          return NextResponse.json({
+            response: context === "No specific information found in Catherine's profile."
+              ? "I don't have specific information about that in Catherine's profile. You can ask about her work experience, technical skills, education, or leadership roles."
+              : `Based on Catherine's profile:\n\n${context}\n\nWould you like to know more about any specific aspect of her background?`
+          })
+        }    // Build messages for Groq
     const messages: Array<{ role: string; content: string }> = [
       {
         role: 'system',

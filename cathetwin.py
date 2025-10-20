@@ -146,9 +146,9 @@ Use the provided context to answer accurately. If information isn't in the conte
     def generate_basic_response(self, context):
         """Generate basic response without AI"""
         if not context or context == "No specific information found in Catherine's profile.":
-            return "I don't have specific information about that in my profile. Could you ask about my work experience, technical skills, education, or leadership roles?"
+            return "I don't have specific information about that in Catherine's profile. You can ask about her work experience, technical skills, education, or leadership roles."
         
-        return f"Here's what I found in my profile:\n\n{context}\n\nWould you like to know more about any specific aspect?"
+        return f"Based on Catherine's profile:\n\n{context}\n\nWould you like to know more about any specific aspect of her background?"
     
     def chat(self, user_input):
         """Process user input and generate response"""
