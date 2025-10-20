@@ -218,23 +218,23 @@ h3 {
 }
 
 .demo-button:first-of-type {
-    background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
     color: white;
-    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
     animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
     0%, 100% {
-        box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
     }
     50% {
-        box-shadow: 0 4px 25px rgba(168, 85, 247, 0.6);
+        box-shadow: 0 4px 25px rgba(37, 99, 235, 0.6);
     }
 }
 
 .demo-button:first-of-type:hover {
-    background: linear-gradient(135deg, #9333ea 0%, #db2777 100%);
+    background: linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 100%);
     transform: translateY(-3px) scale(1.05);
 }
 
