@@ -12,7 +12,7 @@ export default function CatheTwinChat() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
-      content: "👋 Hi! I'm CatheTwin - Catherine Dalafu's AI Digital Twin! I can tell you about my work experience, technical skills, leadership roles, projects, and education. Ask me anything!",
+      content: "👋 Hello! I'm CatheTwin - Catherine Dalafu's AI Digital Twin assistant! I can tell you about Catherine's work experience, technical skills, leadership roles, projects, and education. Ask me anything about her!",
       timestamp: new Date()
     }
   ])
@@ -80,18 +80,18 @@ export default function CatheTwinChat() {
     setMessages([
       {
         role: 'assistant',
-        content: "👋 Chat cleared! I'm ready for new questions about my experience, skills, or projects!",
+        content: "👋 Chat cleared! I'm ready for new questions about Catherine's experience, skills, or projects!",
         timestamp: new Date()
       }
     ])
   }
 
   const quickQuestions = [
-    "Tell me about your database experience",
-    "What are your technical skills?",
-    "Describe your leadership roles",
-    "What projects have you worked on?",
-    "Tell me about your education"
+    "Tell me about Catherine's database experience",
+    "What are Catherine's technical skills?",
+    "Describe Catherine's leadership roles",
+    "What projects has Catherine worked on?",
+    "Tell me about Catherine's education"
   ]
 
   const askQuickQuestion = (question: string) => {
@@ -194,7 +194,7 @@ export default function CatheTwinChat() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={handleKeyDown}
-                placeholder="Ask me about my experience, skills, projects..."
+                placeholder="Ask me about Catherine's experience, skills, projects..."
                 className="flex-1 px-4 py-3 border border-purple-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 resize-none"
                 rows={1}
                 disabled={loading}
