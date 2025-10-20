@@ -4,7 +4,7 @@
       "id": "summary-1",
       "title": "Professional Summary",
       "type": "summary",
-      "content": "Catherine Dalafu - Full-Stack Developer & IT Professional. Experienced full-stack developer and IT professional with expertise in web development, database management, and educational technology. Strong background in leadership roles including PSG Representative and various student government positions. Skilled in Python, MySQL, SQL, and modern web frameworks with a focus on delivering impactful solutions for educational institutions.",
+      "content": "Catherine Dalafu - AI Data Analyst Track Student & IT Professional. Experienced AI Data Analyst and IT professional with expertise in database management, data processing, and AI-driven solutions. Strong background in leadership roles including SITE Representative at PSG University-Wide Council, Secretary of JPCS - SPUP Chapter, Press Relations Officer, and Councilor at PSG-SITE. Skilled in Python, MySQL, Pandas, NumPy, and scikit-learn with a focus on delivering impactful AI and data solutions for organizations.",
       "tags": [
         "summary",
         "profile"
@@ -14,9 +14,10 @@
       "id": "experience-1",
       "title": "Secretary - Junior Philippine Computer Society - SPUP Chapter",
       "type": "experience",
-      "content": "Secretary at Junior Philippine Computer Society - SPUP Chapter (June 2024 - May 2025). Maintained accurate records and documents for council meetings and branch operations Led coordination of rotations and designated curriculum in meeting panels Oversaw implementation of projects and initiatives to drive organizational excellence",
+      "content": "Secretary at Junior Philippine Computer Society - SPUP Chapter (May 2025 - Present, Tuguegarao City, Cagayan). Recorded and distributed proceedings of meetings of JPCS Club - SPUP Chapter. Assisted the President in maintaining records and securing approval of minutes. Checked attendance and served as Timekeeper during club branch meetings. Participated in formulation of the JPCS Club general plan of action for the whole term.",
       "tags": [
         "experience",
+        "leadership",
         "work"
       ]
     },
@@ -24,9 +25,10 @@
       "id": "experience-2",
       "title": "Councilor - Paulinian Student Government - School of Information Technology and Engineering (PSG - SITE)",
       "type": "experience",
-      "content": "Councilor at Paulinian Student Government - School of Information Technology and Engineering (PSG - SITE) (September 2022 - May 2023). Assisted in planning, organizing, and implementing school programs and student activities Supported initiatives that fostered leadership, discipline, and active student participation Contributed to development of policies and projects that enhance the school community",
+      "content": "Councilor at Paulinian Student Government - School of Information Technology and Engineering (PSG - SITE) (September 2022 - May 2023, Tuguegarao City, Cagayan). Assisted in planning, organizing, and implementing school programs and student activities. Supported initiatives that fostered leadership, discipline, and active student participation. Collaborated with fellow officers to develop policies and projects that enhance the school community.",
       "tags": [
         "experience",
+        "leadership",
         "work"
       ]
     },
@@ -54,19 +56,21 @@
       "id": "experience-5",
       "title": "SITE Representative - The Paulinian Student Government (PSG) - University-Wide Council",
       "type": "experience",
-      "content": "SITE Representative at The Paulinian Student Government (PSG) - University-Wide Council (May 2023 - Present). Served as the PSG Site Representative, overseeing on-site coordination and implementation of school events and activities Represented the student body in meetings with school faculty, staff, and offered event operations Organized venue preparations, logistics, and compliance with school policies",
+      "content": "SITE Representative at The Paulinian Student Government (PSG) - University-Wide Council (May 2023 - Present, Tuguegarao City, Cagayan). Served as the PSG Site Representative, overseeing on-site coordination and implementation of school events and activities. Collaborated with faculty, student leaders, and staff to ensure organized and efficient event operations. Organized venue preparations, logistics, and compliance with school policies.",
       "tags": [
         "experience",
+        "leadership",
         "work"
       ]
     },
     {
       "id": "experience-6",
-      "title": "Secretary - Junior Philippine Computer Society - SPUP Chapter",
+      "title": "Secretary - Junior Philippine Computer Society - SPUP Chapter (Previous Term)",
       "type": "experience",
-      "content": "Secretary at Junior Philippine Computer Society - SPUP Chapter (May 2023 - Present). Recorded and distributed proceedings of meetings of JPCS Club Ensured accurate documentation of all club activities Facilitated communication between the President in maintaining accurate meeting minutes of functions Checked attendance and served at Timekeeper during club meetings Participated in formulation of the JPCS Club general plan of action for the whole term",
+      "content": "Secretary at Junior Philippine Computer Society - SPUP Chapter (June 2024 - May 2024, Tuguegarao City, Cagayan). Maintained accurate records and documents for council meetings and branch operations. Secured approval of minutes and incorporated corrections for meeting records. Measured attendance and monitored participation in all Executive Branch and council meetings.",
       "tags": [
         "experience",
+        "leadership",
         "work"
       ]
     },
@@ -74,9 +78,10 @@
       "id": "experience-7",
       "title": "Press Relations Officer - Paulinian Student Government - School of Information Technology and Engineering (PSG - SITE)",
       "type": "experience",
-      "content": "Press Relations Officer at Paulinian Student Government - School of Information Technology and Engineering (PSG - SITE) (June 2023 - May 2024). Managed communication between the organization and media outlets to maintain a positive public image Drafted press releases, announcements, and official statements for publication and distribution for PSG Coordinated media coverage of student government events and initiatives",
+      "content": "Press Relations Officer at Paulinian Student Government - School of Information Technology and Engineering (PSG - SITE) (June 2023 - May 2024, Tuguegarao City, Cagayan). Managed communication between the organization and media outlets to maintain a positive public image. Drafted press releases, announcements, and official statements for publication and distribution for PSG - SITE.",
       "tags": [
         "experience",
+        "leadership",
         "work"
       ]
     },
@@ -157,7 +162,7 @@
       "id": "interview-prep-1",
       "title": "Interview Preparation",
       "type": "interview",
-      "content": "Elevator pitch: I'm Catherine Dalafu, a AI Data Analyst and IT student at St. Paul University Philippines with hands-on experience in database administration, API integration, and machine learning. I've worked remotely with AusBiz Consulting Australia managing real-time data processing systems using Python, and I'm passionate about combining technical skills with leadership—serving as Vice-President of JPCS and SITE Representative for our student government. I focus on delivering practical solutions that drive organizational excellence and student engagement. Questions to expect: Tell me about your experience with database management and API integration. How do you balance academic responsibilities with multiple leadership roles? What attracted you to work remotely with an Australian company?",
+      "content": "Elevator pitch: I'm Catherine Dalafu, an AI Data Analyst Track student at Saint Paul University Philippines with hands-on experience in database administration, API integration, and data processing using Python, Pandas, NumPy, and scikit-learn. I've worked remotely with AusBiz Consulting Australia managing real-time data processing systems and Logbook Vector databases. I'm passionate about combining technical skills with leadership—serving as Secretary of JPCS - SPUP Chapter and SITE Representative for our student government. I focus on delivering practical AI-driven solutions that drive organizational excellence and student engagement. Questions to expect: Tell me about your experience with database management and API integration. How do you balance academic responsibilities with multiple leadership roles? What attracted you to work remotely with an Australian company? Describe your experience with data processing libraries like Pandas and NumPy.",
       "tags": [
         "interview",
         "preparation"
