@@ -1,0 +1,167 @@
+{
+  "documents": [
+    {
+      "id": "summary-1",
+      "title": "Professional Summary",
+      "type": "summary",
+      "content": "Catherine Dalafu - Full-Stack Developer & IT Professional. Experienced full-stack developer and IT professional with expertise in web development, database management, and educational technology. Strong background in leadership roles including PSG Representative and various student government positions. Skilled in Python, MySQL, SQL, and modern web frameworks with a focus on delivering impactful solutions for educational institutions.",
+      "tags": [
+        "summary",
+        "profile"
+      ]
+    },
+    {
+      "id": "experience-1",
+      "title": "Secretary - Junior Philippine Computer Society - SPUP Chapter",
+      "type": "experience",
+      "content": "Secretary at Junior Philippine Computer Society - SPUP Chapter (June 2024 - May 2025). Maintained accurate records and documents for council meetings and branch operations Led coordination of rotations and designated curriculum in meeting panels Oversaw implementation of projects and initiatives to drive organizational excellence",
+      "tags": [
+        "experience",
+        "work"
+      ]
+    },
+    {
+      "id": "experience-2",
+      "title": "Councilor - Paulinian Student Government - School of Information Technology and Engineering (PSG - SITE)",
+      "type": "experience",
+      "content": "Councilor at Paulinian Student Government - School of Information Technology and Engineering (PSG - SITE) (September 2022 - May 2023). Assisted in planning, organizing, and implementing school programs and student activities Supported initiatives that fostered leadership, discipline, and active student participation Contributed to development of policies and projects that enhance the school community",
+      "tags": [
+        "experience",
+        "work"
+      ]
+    },
+    {
+      "id": "experience-3",
+      "title": "Developer & Technical Skills - Skills & Interests (Non-Optional)",
+      "type": "experience",
+      "content": "Developer & Technical Skills at Skills & Interests (Non-Optional) ( - ). ",
+      "tags": [
+        "experience",
+        "work"
+      ]
+    },
+    {
+      "id": "experience-4",
+      "title": "AI Data Analyst - Ausbiz Consulting Australia",
+      "type": "experience",
+      "content": "AI Data Analyst at Ausbiz Consulting Australia (August 2024 - October 2026). Managed Logbook Vector database and integrated Google API for real-time data access Administered the Logbook Vector database and integrated Google API to optimize AI reference speed Utilized Python, Pandas, NumPy, and scikit-learn to process large-scale datasets, producing real-time data Worked collaboratively with teams to embed AI-driven solutions into existing operational processes",
+      "tags": [
+        "experience",
+        "work"
+      ]
+    },
+    {
+      "id": "experience-5",
+      "title": "SITE Representative - The Paulinian Student Government (PSG) - University-Wide Council",
+      "type": "experience",
+      "content": "SITE Representative at The Paulinian Student Government (PSG) - University-Wide Council (May 2023 - Present). Served as the PSG Site Representative, overseeing on-site coordination and implementation of school events and activities Represented the student body in meetings with school faculty, staff, and offered event operations Organized venue preparations, logistics, and compliance with school policies",
+      "tags": [
+        "experience",
+        "work"
+      ]
+    },
+    {
+      "id": "experience-6",
+      "title": "Secretary - Junior Philippine Computer Society - SPUP Chapter",
+      "type": "experience",
+      "content": "Secretary at Junior Philippine Computer Society - SPUP Chapter (May 2023 - Present). Recorded and distributed proceedings of meetings of JPCS Club Ensured accurate documentation of all club activities Facilitated communication between the President in maintaining accurate meeting minutes of functions Checked attendance and served at Timekeeper during club meetings Participated in formulation of the JPCS Club general plan of action for the whole term",
+      "tags": [
+        "experience",
+        "work"
+      ]
+    },
+    {
+      "id": "experience-7",
+      "title": "Press Relations Officer - Paulinian Student Government - School of Information Technology and Engineering (PSG - SITE)",
+      "type": "experience",
+      "content": "Press Relations Officer at Paulinian Student Government - School of Information Technology and Engineering (PSG - SITE) (June 2023 - May 2024). Managed communication between the organization and media outlets to maintain a positive public image Drafted press releases, announcements, and official statements for publication and distribution for PSG Coordinated media coverage of student government events and initiatives",
+      "tags": [
+        "experience",
+        "work"
+      ]
+    },
+    {
+      "id": "project-1",
+      "title": "Logbook Vector Database Integration with Google API",
+      "type": "project",
+      "content": "Logbook Vector Database Integration with Google API. Ausbiz Consulting Australia needed to optimize their AI reference speed and process large-scale datasets in real-time for operational efficiency. Manage and integrate Logbook Vector database with Google API to enable real-time data access and optimize AI-driven solutions for existing operational processes. Actions: Administered the Logbook Vector database ensuring data integrity and performance Integrated Google API to optimize AI reference speed and enable real-time data access Utilized Python with Pandas, NumPy, and scikit-learn libraries to process large-scale datasets Collaborated with cross-functional teams to embed AI-driven solutions into operational workflows Produced real-time data processing capabilities for improved decision-making Results: Successfully optimized AI reference speed through Google API integration Enabled real-time data processing for large-scale datasets Improved operational efficiency through automated data workflows Delivered production-ready AI-driven solutions integrated into existing systems",
+      "tags": [
+        "project",
+        "Python",
+        "Pandas",
+        "NumPy"
+      ]
+    },
+    {
+      "id": "project-2",
+      "title": "PSG Event Coordination and Management System",
+      "type": "project",
+      "content": "PSG Event Coordination and Management System. The Paulinian Student Government needed effective coordination of university-wide events, venue management, and communication with faculty, staff, and student body. Serve as SITE Representative overseeing on-site coordination, event implementation, and manage press relations for all PSG activities and initiatives. Actions: Coordinated venue preparations, logistics, and compliance with school policies for all events Represented student body in meetings with school faculty and staff to align event operations Managed communication between organization and media outlets to maintain positive public image Drafted press releases, announcements, and official statements for PSG publications Organized and coordinated media coverage of student government events and initiatives Ensured compliance with school policies while organizing successful events Results: Successfully coordinated multiple university-wide events with full compliance to school policies Improved communication between student government and university administration Maintained positive public image through effective media relations Delivered professional press releases and official statements for all major PSG activities Enhanced student engagement through well-organized and properly documented events",
+      "tags": [
+        "project",
+        "Technical Writing",
+        "Event Management",
+        "Media Relations"
+      ]
+    },
+    {
+      "id": "project-3",
+      "title": "JPCS Club Operations and Documentation System",
+      "type": "project",
+      "content": "JPCS Club Operations and Documentation System. JPCS Club needed accurate documentation, record-keeping, and coordination of rotations and curriculum for meetings while maintaining organizational excellence. Lead club operations as Vice-President, maintain accurate records, coordinate meetings, and ensure proper documentation of all activities and initiatives. Actions: Maintained accurate records and documents for council meetings and branch operations Led coordination of rotations and designated curriculum in meeting panels Recorded and distributed proceedings of all JPCS Club meetings Ensured accurate documentation of all club activities and initiatives Facilitated communication between President and club members Checked attendance and served as Timekeeper during club meetings Participated in formulation of JPCS Club general plan of action Oversaw implementation of projects to drive organizational excellence Results: Established comprehensive documentation system for all club activities Improved meeting efficiency through structured coordination and timekeeping Successfully implemented projects and initiatives that enhanced organizational excellence Maintained accurate attendance and activity records for accountability Contributed to strategic planning and execution of club objectives",
+      "tags": [
+        "project",
+        "Documentation Systems",
+        "Project Management",
+        "Technical Writing"
+      ]
+    },
+    {
+      "id": "skills-1",
+      "title": "Technical Skills",
+      "type": "skills",
+      "content": "Programming skills: Python, SQL/MySQL, JavaScript/NodeJS, PHP/Laravel. Frameworks: Laravel, NodeJS, Pandas, NumPy, scikit-learn",
+      "tags": [
+        "skills",
+        "technical"
+      ]
+    },
+    {
+      "id": "education-1",
+      "title": "Bachelor of Science in Information Technology - Saint Paul University Philippines (SPUP)",
+      "type": "education",
+      "content": "Bachelor of Science in Information Technology from Saint Paul University Philippines (SPUP). Major in Web & App Development Ongoing",
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "id": "education-2",
+      "title": "Senior High School - Rodolfo B Albano Stand-Alone Senior High School",
+      "type": "education",
+      "content": "Senior High School from Rodolfo B Albano Stand-Alone Senior High School.  ",
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "id": "education-3",
+      "title": "Junior High School - Delfin Albano National High School - Main",
+      "type": "education",
+      "content": "Junior High School from Delfin Albano National High School - Main.  ",
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "id": "interview-prep-1",
+      "title": "Interview Preparation",
+      "type": "interview",
+      "content": "Elevator pitch: I'm Catherine Dalafu, a AI Data Analyst and IT student at St. Paul University Philippines with hands-on experience in database administration, API integration, and machine learning. I've worked remotely with AusBiz Consulting Australia managing real-time data processing systems using Python, and I'm passionate about combining technical skills with leadership—serving as Vice-President of JPCS and SITE Representative for our student government. I focus on delivering practical solutions that drive organizational excellence and student engagement. Questions to expect: Tell me about your experience with database management and API integration. How do you balance academic responsibilities with multiple leadership roles? What attracted you to work remotely with an Australian company?",
+      "tags": [
+        "interview",
+        "preparation"
+      ]
+    }
+  ]
+}

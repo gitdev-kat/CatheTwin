@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "digital-twin": {
+      "command": "node",
+      "args": ["dist/mcp/server.js"],
+      "env": {
+        "UPSTASH_VECTOR_REST_URL": "${UPSTASH_VECTOR_REST_URL}",
+        "UPSTASH_VECTOR_REST_TOKEN": "${UPSTASH_VECTOR_REST_TOKEN}",
+        "GROQ_API_KEY": "${GROQ_API_KEY}",
+        "ADMIN_API_KEY": "${ADMIN_API_KEY}"
+      }
+    }
+  }
+}
