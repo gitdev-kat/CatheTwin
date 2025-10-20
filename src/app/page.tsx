@@ -1,9 +1,16 @@
+'use client';
+import { useEffect } from 'react';
+
 export default function Home() {
+  useEffect(() => {
+    window.location.href = '/index.html';
+  }, []);
+  
   return (
     <main style={{ display: 'flex', minHeight: '100vh', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '24px' }}>
       <div style={{ textAlign: 'center' }}>
-        <h1 style={{ fontSize: '36px', fontWeight: 'bold', marginBottom: '16px' }}>🚀 Digital Twin RAG API</h1>
-        <p style={{ fontSize: '20px', marginBottom: '32px' }}>Retrieval-Augmented Generation with Upstash & Groq</p>
+        <h1 style={{ fontSize: '36px', fontWeight: 'bold', marginBottom: '16px' }}>🚀 Redirecting to Portfolio...</h1>
+        <p style={{ fontSize: '20px', marginBottom: '32px' }}>Loading CatheTwin Portfolio</p>
         
         <div style={{ backgroundColor: '#f3f4f6', padding: '32px', borderRadius: '8px', marginBottom: '32px' }}>
           <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '16px' }}>API Endpoints</h2>
