@@ -142,7 +142,13 @@ export default function CatheTwinChat() {
                       : 'bg-gray-100 text-gray-800'
                   }`}
                 >
-                  <p className="whitespace-pre-wrap">{message.content}</p>
+                  <p 
+                    className="whitespace-pre-wrap"
+                    dangerouslySetInnerHTML={{
+                      __html: message.content
+                        .replace(/\[([^\]]+)\]/g, '<span style="color: #a855f7; font-weight: 600;">[$1]</span>')
+                    }}
+                  />
                   <p className={`text-xs mt-1 ${message.role === 'user' ? 'text-purple-100' : 'text-gray-500'}`}>
                     {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                   </p>
