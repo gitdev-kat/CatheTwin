@@ -4,7 +4,7 @@
       "id": "summary-1",
       "title": "Professional Summary",
       "type": "summary",
-      "content": "Catherine Dalafu - AI Data Analyst Track Student & IT Professional. Experienced AI Data Analyst and IT professional with expertise in database management, data processing, and AI-driven solutions. Strong background in leadership roles including SITE Representative at PSG University-Wide Council, Secretary of JPCS - SPUP Chapter, Press Relations Officer, and Councilor at PSG-SITE. Skilled in Python, MySQL, Pandas, NumPy, and scikit-learn with a focus on delivering impactful AI and data solutions for organizations.",
+      "content": "Catherine Dalafu - IT Student & Web Developer. IT Student majoring in Web and Application Development with expertise in database management, web development, and full-stack solutions. Strong background in leadership roles including SITE Representative at PSG University-Wide Council, Secretary of JPCS - SPUP Chapter, Press Relations Officer, and Councilor at PSG-SITE. Skilled in Python, MySQL, Laravel, NodeJS, React, Pandas, NumPy, and scikit-learn with a focus on delivering impactful web applications and data-driven solutions.",
       "tags": [
         "summary",
         "profile"
@@ -135,7 +135,7 @@
       "id": "education-1",
       "title": "Bachelor of Science in Information Technology - Saint Paul University Philippines (SPUP)",
       "type": "education",
-      "content": "Bachelor of Science in Information Technology from Saint Paul University Philippines (SPUP). Major in Web & App Development Ongoing",
+      "content": "Bachelor of Science in Information Technology from Saint Paul University Philippines (SPUP). Major in Web and Application Development. Ongoing",
       "tags": [
         "education"
       ]
@@ -162,7 +162,7 @@
       "id": "interview-prep-1",
       "title": "Interview Preparation",
       "type": "interview",
-      "content": "Elevator pitch: I'm Catherine Dalafu, an AI Data Analyst Track student at Saint Paul University Philippines with hands-on experience in database administration, API integration, and data processing using Python, Pandas, NumPy, and scikit-learn. I've worked remotely with AusBiz Consulting Australia managing real-time data processing systems and Logbook Vector databases. I'm passionate about combining technical skills with leadership—serving as Secretary of JPCS - SPUP Chapter and SITE Representative for our student government. I focus on delivering practical AI-driven solutions that drive organizational excellence and student engagement. Questions to expect: Tell me about your experience with database management and API integration. How do you balance academic responsibilities with multiple leadership roles? What attracted you to work remotely with an Australian company? Describe your experience with data processing libraries like Pandas and NumPy.",
+      "content": "Elevator pitch: I'm Catherine Dalafu, an IT Student majoring in Web and Application Development at Saint Paul University Philippines with hands-on experience in database administration, API integration, and full-stack web development using Python, Laravel, NodeJS, and React. I've worked remotely with AusBiz Consulting Australia managing real-time data processing systems and Logbook Vector databases. I'm passionate about combining technical skills with leadership—serving as Secretary of JPCS - SPUP Chapter and SITE Representative for our student government. I focus on delivering practical web solutions and data-driven applications that drive organizational excellence and student engagement. Questions to expect: Tell me about your experience with web development and database management. How do you balance academic responsibilities with multiple leadership roles? What attracted you to work remotely with an Australian company? Describe your experience with full-stack development frameworks.",
       "tags": [
         "interview",
         "preparation"

@@ -12,7 +12,7 @@ export default function CatheTwinChat() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
-      content: "👋 Hello! I'm CatheTwin - Catherine Dalafu's AI Digital Twin assistant! I can tell you about Catherine's experience as an AI Data Analyst Track student, her technical skills, leadership roles, projects, and education. Ask me anything about her!",
+      content: "👋 Hello! I'm CatheTwin - Catherine Dalafu's AI Digital Twin assistant! I can tell you about Catherine's experience as an IT Student majoring in Web and Application Development, her technical skills, leadership roles, projects, and education. Ask me anything about her!",
       timestamp: new Date()
     }
   ])
@@ -80,7 +80,7 @@ export default function CatheTwinChat() {
     setMessages([
       {
         role: 'assistant',
-        content: "👋 Chat cleared! I'm ready for new questions about Catherine's AI Data Analyst experience, skills, or projects!",
+        content: "👋 Chat cleared! I'm ready for new questions about Catherine's web development experience, skills, or projects!",
         timestamp: new Date()
       }
     ])
