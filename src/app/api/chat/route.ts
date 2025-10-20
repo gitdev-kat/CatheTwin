@@ -87,8 +87,7 @@ function buildContext(query: string, documents: Document[]): string {
 
   const contextParts: string[] = []
   for (const doc of matches) {
-    contextParts.push(`[${doc.type.toUpperCase()}] ${doc.title}`)
-    contextParts.push(doc.content)
+    contextParts.push(`${doc.title}: ${doc.content}`)
     contextParts.push('')
   }
 
@@ -157,7 +156,9 @@ RESPONSE GUIDELINES:
 - Avoid generic statements - provide concrete details from the context
 - If asked about a specific skill, project, or role, focus ONLY on that topic
 - Don't add extra information unless it's directly relevant to the question
-- Be friendly and professional, but prioritize clarity and precision to avoid misunderstandings`
+- Be friendly and professional, but prioritize clarity and precision to avoid misunderstandings
+- Write in clean paragraphs WITHOUT any tags like [INTERVIEW], [EXPERIENCE], [SUMMARY], etc.
+- Keep responses natural and conversational`
       }
     ]
 
