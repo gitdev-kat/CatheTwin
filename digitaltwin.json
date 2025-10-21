@@ -167,16 +167,6 @@
       "tags": [
         "education"
       ]
-    },
-    {
-      "id": "interview-prep-1",
-      "title": "Interview Preparation",
-      "type": "interview",
-      "content": "Elevator pitch: I'm Catherine Dalafu, an IT Student majoring in Web and Application Development at Saint Paul University Philippines with hands-on experience in database administration, API integration, and full-stack web development using Python, Laravel, NodeJS, and React. I've worked remotely with AusBiz Consulting Australia managing real-time data processing systems and Logbook Vector databases. I'm passionate about combining technical skills with leadership—serving as Secretary of JPCS - SPUP Chapter and SITE Representative for our student government. I focus on delivering practical web solutions and data-driven applications that drive organizational excellence and student engagement. Questions to expect: Tell me about your experience with web development and database management. How do you balance academic responsibilities with multiple leadership roles? What attracted you to work remotely with an Australian company? Describe your experience with full-stack development frameworks.",
-      "tags": [
-        "interview",
-        "preparation"
-      ]
     }
   ]
 }

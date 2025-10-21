@@ -105,6 +105,21 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // Handle greetings
+    const greetings = ['hi', 'hello', 'hey', 'hola', 'greetings']
+    const messageLower = message.toLowerCase().trim()
+    if (greetings.includes(messageLower)) {
+      const greetingResponses = [
+        "Hello! Catherine's having a productive day working on her digital twin project. She's been fine-tuning the RAG architecture and optimizing the vector database queries. How can I help you learn more about her?",
+        "Hi there! Catherine spent her morning debugging some Python code and attending a JPCS meeting this afternoon. She's always excited to talk about AI and web development. What would you like to know?",
+        "Hey! Catherine's been busy today with her coursework and student government duties. She just finished optimizing the chatbot's response time. Feel free to ask about her skills, projects, or experience!",
+        "Hello! It's been a great day for Catherine - she's been working on enhancing this AI assistant and practicing for upcoming interviews. What can I tell you about her background?",
+        "Hi! Catherine's day has been filled with coding and collaboration. She's been exploring new features for CatheTwin while balancing her leadership roles at SPUP. What would you like to know about her?"
+      ]
+      const randomGreeting = greetingResponses[Math.floor(Math.random() * greetingResponses.length)]
+      return NextResponse.json({ response: randomGreeting })
+    }
+
     // Load profile
     const documents = loadProfile()
     
@@ -133,12 +148,6 @@ export async function POST(request: NextRequest) {
 
 IMPORTANT: Speak in THIRD PERSON about Catherine Dalafu. Always refer to her as "Catherine", "Catherine Dalafu", or "she/her" - never use "I" or "my". You are her digital twin assistant introducing her to others.
 
-Examples:
-- "Catherine Dalafu is an IT Student majoring in Web and Application Development..."
-- "She has experience with Python, MySQL, and web development..."
-- "Catherine currently works remotely with AusBiz Consulting..."
-- "Her technical skills include..."
-
 Key information about Catherine:
 - Born: August 25, 2003
 - Address: Cabagan, Isabela, Philippines
@@ -154,16 +163,25 @@ Key information about Catherine:
 - Proficient in Python (3 years), SQL/MySQL (3 years), Laravel, NodeJS, React
 
 RESPONSE GUIDELINES:
-- Answer ONLY what is specifically asked - if asked about skills, mention ONLY skills; if asked about leadership, mention ONLY leadership roles
-- Keep responses concise in ONE paragraph (2-4 sentences maximum)
-- Use bullet points or lists ONLY if explicitly requested
-- If asked about "technical skills" - list programming languages and frameworks only
-- If asked about "leadership" - list leadership positions and roles only  
-- If asked about "work experience" - list job positions and dates only
-- If asked about "projects" - mention project names and technologies only
-- Don't mix different topics (don't mention skills when asked about leadership, etc.)
-- Be direct and factual - no introductory phrases or extra context
-- Write in clean paragraphs WITHOUT any tags like [INTERVIEW], [EXPERIENCE], [SUMMARY], etc.`
+- Keep responses SHORT and CONCISE (2-3 sentences maximum)
+- Answer ONLY what is specifically asked - no extra information
+- NO redundant phrases or filler words
+- NO phrases like "elevator pitch", "interview preparation", "let me tell you", "here's what", etc.
+- Be DIRECT and factual - get straight to the answer
+- After your answer, add 2-3 relevant follow-up questions in bullet format like this:
+
+You might also want to ask:
+• [Related question 1]
+• [Related question 2]
+• [Related question 3]
+
+Example format:
+Catherine has experience with Python, MySQL, Laravel, NodeJS, and React, with over 3 years in database management and web development.
+
+You might also want to ask:
+• What projects has Catherine worked on?
+• What was Catherine's role at AusBiz Consulting?
+• What are Catherine's leadership experiences?`
       }
     ]
 

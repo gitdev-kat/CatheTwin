@@ -3,219 +3,582 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CatheTwin - Catherine Dalafu's AI Career Assistant Portfolio</title>
-  <link rel="stylesheet" href="/portfolio.css">
+  <title>CatheTwin - AI Career Assistant by Catherine Dalafu</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect fill="rgba(255,255,255,0.03)" width="100" height="100"/><circle cx="50" cy="50" r="30" fill="rgba(255,255,255,0.05)"/></svg>');
+      animation: float 20s linear infinite;
+    }
+
+    @keyframes float {
+      from { transform: translateY(0); }
+      to { transform: translateY(-100px); }
+    }
+
+    .hero-content {
+      text-align: center;
+      color: white;
+      z-index: 1;
+      padding: 2rem;
+      max-width: 900px;
+    }
+
+    .profile-avatar {
+      width: 150px;
+      height: 150px;
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      font-weight: bold;
+      color: white;
+      margin: 0 auto 2rem;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      animation: pulse 3s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      animation: fadeInUp 1s ease;
+    }
+
+    .hero .tagline {
+      font-size: 1.5rem;
+      opacity: 0.95;
+      margin-bottom: 2rem;
+      animation: fadeInUp 1s ease 0.2s both;
+    }
+
+    .hero .subtitle {
+      font-size: 1.1rem;
+      opacity: 0.85;
+      margin-bottom: 3rem;
+      animation: fadeInUp 1s ease 0.4s both;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeInUp 1s ease 0.6s both;
+    }
+
+    .cta-btn {
+      padding: 1rem 2.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .cta-btn.primary {
+      background: white;
+      color: #667eea;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .cta-btn.primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    }
+
+    .cta-btn.secondary {
+      background: rgba(255,255,255,0.2);
+      color: white;
+      border: 2px solid white;
+      backdrop-filter: blur(10px);
+    }
+
+    .cta-btn.secondary:hover {
+      background: rgba(255,255,255,0.3);
+      transform: translateY(-3px);
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+      40% { transform: translateX(-50%) translateY(-20px); }
+      60% { transform: translateX(-50%) translateY(-10px); }
+    }
+
+    .scroll-indicator svg {
+      width: 30px;
+      height: 30px;
+      fill: white;
+      opacity: 0.7;
+    }
+
+    /* Content Sections */
+    .container {
+      background: #f8f9fa;
+    }
+
+    .section {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section:nth-child(even) {
+      background: white;
+    }
+
+    .section h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      color: #667eea;
+      text-align: center;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 3rem;
+    }
+
+    /* Feature Cards */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(102,126,234,0.3);
+      border-color: #667eea;
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .card p {
+      color: #666;
+      line-height: 1.8;
+    }
+
+    /* Tech Stack */
+    .tech-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .tech-badge {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      box-shadow: 0 5px 15px rgba(102,126,234,0.3);
+      transition: all 0.3s ease;
+    }
+
+    .tech-badge:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 25px rgba(102,126,234,0.4);
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      padding: 2rem 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 3rem;
+      width: 45%;
+    }
+
+    .timeline-item:nth-child(odd) {
+      margin-left: 0;
+      text-align: right;
+      padding-right: 3rem;
+    }
+
+    .timeline-item:nth-child(even) {
+      margin-left: auto;
+      text-align: left;
+      padding-left: 3rem;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background: #667eea;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 0 0 4px #667eea;
+    }
+
+    .timeline-item:nth-child(odd)::before {
+      right: -10px;
+    }
+
+    .timeline-item:nth-child(even)::before {
+      left: -10px;
+    }
+
+    .timeline-item h3 {
+      color: #667eea;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-item p {
+      color: #666;
+      line-height: 1.8;
+    }
+
+    /* Contact Section */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(102,126,234,0.3);
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 15px 40px rgba(102,126,234,0.4);
+    }
+
+    .contact-card svg {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 1rem;
+      fill: white;
+    }
+
+    .contact-card h4 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-card p {
+      opacity: 0.9;
+      font-size: 0.95rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #1a1a2e;
+      color: white;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    footer p {
+      margin: 0.5rem 0;
+      opacity: 0.8;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.5rem; }
+      .hero .tagline { font-size: 1.2rem; }
+      .section h2 { font-size: 2rem; }
+      .timeline::before { left: 20px; }
+      .timeline-item {
+        width: 100%;
+        padding-left: 3rem !important;
+        padding-right: 0 !important;
+        text-align: left !important;
+      }
+      .timeline-item::before {
+        left: 10px !important;
+      }
+      .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="profile-pic-placeholder">CD</div>
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-content">
+      <div class="profile-avatar">CD</div>
       <h1>CatheTwin</h1>
-      <p class="subtitle">AI-Powered Career Assistant by Catherine Dalafu</p>
-      <p style="color: #666; font-size: 1rem; margin-bottom: 0.5rem;">Digital Twin Project for Career Development</p>
-      <p class="university">Created by Catherine Dalafu | BS Information Technology</p>
-      <p class="university">St. Paul University Philippines</p>
-      <p style="color: #666; margin-top: 0.5rem;">OJT Project Portfolio</p>
-      <div class="contact-info">
-        <a href="mailto:catherinedalafu@spup.edu.ph">📧 catherinedalafu@spup.edu.ph</a>
-        <a href="tel:09670912142">📱 09670912142</a>
-        <a href="https://github.com/gitdev-kat" target="_blank">💻 GitHub</a>
-        <a href="https://www.linkedin.com/in/catherine-dalafu-680548377" target="_blank">🔗 LinkedIn</a>
+      <p class="tagline">Your AI-Powered Career Assistant</p>
+      <p class="subtitle">Built by Catherine Dalafu | BS Information Technology, SPUP</p>
+      <div class="cta-buttons">
+        <a href="/chat" class="cta-btn primary">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+          Start Chatting
+        </a>
+        <a href="#about" class="cta-btn secondary">Learn More</a>
       </div>
-    </header>
+    </div>
+    <div class="scroll-indicator">
+      <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+    </div>
+  </div>
 
-    <section class="section">
-      <h2>👋 About Me</h2>
-      <p class="intro-text">
-        I am a dedicated Information Technology student specializing in Web & App Development at St. Paul University Philippines. With hands-on experience from my internship at AusBiz Consulting Australia, I have developed expertise in AI technologies, database management, and data analysis. As an active leader in student organizations including serving as PSG SITE Representative and JPCS Secretary, I combine technical skills with strong communication and organizational abilities.
-      </p>
-      <p class="intro-text">
-        This CatheTwin project represents the culmination of my learning journey, applying cutting-edge AI technologies to solve real-world career development challenges.
-      </p>
-    </section>
-
-    <section class="section">
-      <h2>🤖 What is CatheTwin?</h2>
-      <p class="intro-text">
-        CatheTwin is an AI-powered career assistant that leverages advanced RAG (Retrieval-Augmented Generation) technology to provide personalized career guidance and interview preparation. Built using cutting-edge technologies from my internship at AusBiz Consulting, this intelligent system analyzes professional profiles and delivers context-aware responses to help users prepare for job applications and career advancement.
-      </p>
-            
-      <div class="project-overview">
+  <!-- Main Content -->
+  <div class="container">
+    <!-- About Section -->
+    <section class="section" id="about">
+      <h2>🚀 About CatheTwin</h2>
+      <p class="section-subtitle">An intelligent AI chatbot powered by cutting-edge RAG technology</p>
+      <div class="cards-grid">
         <div class="card">
-          <h3>🎯 Purpose</h3>
-          <p>An intelligent AI chatbot that serves as a personalized career assistant, helping users prepare their resumes, practice interviews, and plan their career development journey.</p>
+          <h3>🎯 Smart & Personalized</h3>
+          <p>Leverages advanced RAG architecture with Upstash Vector Database to provide context-aware, personalized career guidance tailored to your profile.</p>
         </div>
         <div class="card">
-          <h3>💡 Innovation</h3>
-          <p>Combines Upstash Vector database with Groq API for lightning-fast AI inference, creating highly relevant and personalized career guidance based on individual profiles.</p>
+          <h3>⚡ Lightning Fast</h3>
+          <p>Powered by Groq API for ultra-fast AI inference, delivering near-instantaneous responses to your career questions and interview preparation needs.</p>
         </div>
         <div class="card">
-          <h3>🌟 Real-World Application</h3>
-          <p>Designed to help job seekers and professionals optimize their resumes, prepare for interviews, and make informed career decisions through AI-powered insights.</p>
+          <h3>🎓 Career Focused</h3>
+          <p>Designed specifically for job seekers and professionals, helping with resume optimization, interview prep, and career development strategies.</p>
         </div>
       </div>
     </section>
 
+    <!-- Tech Stack Section -->
     <section class="section">
-      <h2>🛠️ Technology Stack</h2>
-      <p style="margin-bottom: 1rem;">Built with modern technologies learned during my OJT at AusBiz Consulting:</p>
-      <div class="tech-stack">
+      <h2>💻 Technology Stack</h2>
+      <p class="section-subtitle">Built with modern technologies from my AusBiz Consulting internship</p>
+      <div class="tech-grid">
         <span class="tech-badge">Python</span>
-        <span class="tech-badge">Upstash Vector Database</span>
-        <span class="tech-badge">Groq API</span>
         <span class="tech-badge">Next.js</span>
+        <span class="tech-badge">Upstash Vector DB</span>
+        <span class="tech-badge">Groq API</span>
         <span class="tech-badge">RAG Architecture</span>
         <span class="tech-badge">Pandas & NumPy</span>
-        <span class="tech-badge">scikit-learn</span>
-        <span class="tech-badge">HTML/CSS/JavaScript</span>
-        <span class="tech-badge">Laravel</span>
+        <span class="tech-badge">TypeScript</span>
+        <span class="tech-badge">Tailwind CSS</span>
         <span class="tech-badge">MySQL</span>
+        <span class="tech-badge">Laravel</span>
       </div>
     </section>
 
+    <!-- Features Section -->
     <section class="section">
       <h2>✨ Key Features</h2>
-      <ul class="features-list">
-        <li><strong>🔍 Resume Analysis & Optimization:</strong> AI-powered analysis of resume content with suggestions for improvement and keyword optimization.</li>
-        <li><strong>💬 Interactive Career Chatbot:</strong> Natural conversation interface powered by Groq API for fast, intelligent responses to career-related questions.</li>
-        <li><strong>📚 RAG-Powered Knowledge Retrieval:</strong> Uses Upstash Vector database to retrieve relevant career information and provide accurate, context-aware guidance.</li>
-        <li><strong>🎓 Interview Preparation Assistant:</strong> Generates practice interview questions based on your profile and provides feedback on responses.</li>
-        <li><strong>📈 Skills Gap Identification:</strong> Analyzes your current skills against job market requirements and suggests learning paths.</li>
-        <li><strong>🎯 Personalized Career Recommendations:</strong> Provides tailored career advice based on your background, skills, and goals.</li>
-        <li><strong>⚡ Fast AI Inference:</strong> Leverages Groq API integration for near-instantaneous responses and smooth user experience.</li>
-      </ul>
+      <p class="section-subtitle">Everything you need for career success</p>
+      <div class="cards-grid">
+        <div class="card">
+          <h3>🔍 Resume Analysis</h3>
+          <p>AI-powered resume optimization with keyword suggestions and improvement recommendations.</p>
+        </div>
+        <div class="card">
+          <h3>💬 Interactive Chat</h3>
+          <p>Natural conversation interface for answering career questions in real-time.</p>
+        </div>
+        <div class="card">
+          <h3>🎯 Interview Prep</h3>
+          <p>Practice interview questions tailored to your profile and experience level.</p>
+        </div>
+        <div class="card">
+          <h3>📊 Skills Analysis</h3>
+          <p>Identify skills gaps and get personalized learning path recommendations.</p>
+        </div>
+        <div class="card">
+          <h3>🚀 Career Guidance</h3>
+          <p>Get personalized career advice based on your background and goals.</p>
+        </div>
+        <div class="card">
+          <h3>⚡ Fast Responses</h3>
+          <p>Lightning-fast AI inference for smooth, uninterrupted conversations.</p>
+        </div>
+      </div>
     </section>
 
+    <!-- Timeline Section -->
     <section class="section">
-      <h2>🏗️ System Architecture</h2>
-            
-      <h3>1. Data Processing Layer</h3>
-      <p>Utilizes Python with Pandas and NumPy to process resume data, extract key information, and prepare it for vectorization. The system analyzes education, experience, skills, and achievements to create comprehensive embeddings.</p>
-
-      <h3>2. Vector Database (Upstash)</h3>
-      <p>Stores vectorized resume data and career knowledge in Upstash Vector database, enabling semantic search capabilities. This allows the system to find relevant information quickly and accurately based on user queries.</p>
-
-      <h3>3. AI Inference Engine (Groq API)</h3>
-      <p>Integrates Groq API for ultra-fast AI inference, providing near-instantaneous responses to user questions. The system combines retrieved context with AI generation to produce intelligent, personalized career guidance.</p>
-
-      <h3>4. RAG Pipeline</h3>
-      <p>Implements Retrieval-Augmented Generation architecture that retrieves relevant information from the vector database and generates contextually appropriate responses, ensuring accuracy and relevance.</p>
-
-      <h3>5. Web Interface</h3>
-      <p>Built with Next.js and modern web technologies (HTML, CSS, JavaScript) to provide an intuitive, responsive user experience across all devices.</p>
-    </section>
-
-    <section class="section">
-      <h2>📈 Development Timeline</h2>
+      <h2>📅 Development Journey</h2>
+      <p class="section-subtitle">10 weeks of innovation and learning</p>
       <div class="timeline">
         <div class="timeline-item">
-          <h3>Phase 1: Research & Planning (Week 1-2)</h3>
-          <p>Researched RAG architectures, evaluated vector databases, and designed system architecture. Studied best practices for career guidance systems and AI chatbot development.</p>
+          <h3>Week 1-2: Research & Planning</h3>
+          <p>Researched RAG architectures and designed system blueprint for career assistant functionality.</p>
         </div>
         <div class="timeline-item">
-          <h3>Phase 2: Database Setup & Integration (Week 3-4)</h3>
-          <p>Set up Upstash Vector database, implemented data processing pipeline using Python and Pandas, and configured Groq API for AI inference.</p>
+          <h3>Week 3-4: Database Setup</h3>
+          <p>Configured Upstash Vector DB and implemented data processing pipeline with Python.</p>
         </div>
         <div class="timeline-item">
-          <h3>Phase 3: RAG Implementation (Week 5-6)</h3>
-          <p>Built retrieval and generation pipeline, optimized embeddings for semantic search, and fine-tuned prompt engineering for career-focused responses.</p>
+          <h3>Week 5-6: RAG Implementation</h3>
+          <p>Built retrieval and generation pipeline with optimized embeddings for semantic search.</p>
         </div>
         <div class="timeline-item">
-          <h3>Phase 4: Frontend Development (Week 7-8)</h3>
-          <p>Created user interface with Next.js, implemented chat functionality, and designed responsive layouts for optimal user experience.</p>
+          <h3>Week 7-8: Frontend Development</h3>
+          <p>Created responsive UI with Next.js and implemented real-time chat functionality.</p>
         </div>
         <div class="timeline-item">
-          <h3>Phase 5: Testing & Refinement (Week 9-10)</h3>
-          <p>Conducted comprehensive testing, gathered user feedback, optimized performance, and refined AI responses for accuracy and relevance.</p>
+          <h3>Week 9-10: Testing & Launch</h3>
+          <p>Comprehensive testing, performance optimization, and production deployment.</p>
         </div>
       </div>
     </section>
 
+    <!-- Experience Section -->
     <section class="section">
-      <h2>💼 Relevant Experience</h2>
-            
-      <div class="experience-section">
-        <h3>AusBiz Consulting, Australia (Remote)</h3>
-        <p class="experience-details"><strong>Intern</strong> | August 2025 - October 2025</p>
-        <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
-          <li>Managed Upstash Vector database and integrated Groq API for fast AI inference</li>
-          <li>Utilized Python, Pandas, NumPy, and scikit-learn to process and analyze large-scale datasets</li>
-          <li>Worked collaboratively with teams to embed AI-driven solutions into existing operational processes</li>
-          <li>Gained hands-on experience with RAG architectures and vector database optimization</li>
-        </ul>
-      </div>
-
-      <div class="experience-section">
-        <h3>Leadership Positions</h3>
-        <p><strong>PSG SITE Representative</strong> - St. Paul University Philippines (May 2025 - Present)</p>
-        <p><strong>JPCS Secretary</strong> - Junior Philippine Computer Society (May 2025 - Present)</p>
-        <p style="margin-top: 0.5rem; color: #666;">Active in student leadership roles, demonstrating strong organizational, communication, and project management skills.</p>
+      <h2>💼 My Experience</h2>
+      <p class="section-subtitle">Building real-world AI solutions</p>
+      <div class="cards-grid">
+        <div class="card">
+          <h3>🌏 AusBiz Consulting (Remote)</h3>
+          <p><strong>Intern</strong> | August - October 2025</p>
+          <p style="margin-top: 1rem;">Managed Vector databases, integrated Groq API, and processed large-scale datasets using Python, Pandas, and NumPy for AI-driven solutions.</p>
+        </div>
+        <div class="card">
+          <h3>🎓 Student Leadership</h3>
+          <p><strong>PSG SITE Representative</strong> | May 2025 - Present</p>
+          <p><strong>JPCS Secretary</strong> | May 2025 - Present</p>
+          <p style="margin-top: 1rem;">Leading student organizations with strong communication and project management skills.</p>
+        </div>
       </div>
     </section>
 
+    <!-- Contact Section -->
     <section class="section">
-      <h2>🎯 Learning Outcomes & Skills Developed</h2>
-      <div class="achievement-item">
-        <strong>Advanced AI & Machine Learning</strong>
-        <p>Gained deep understanding of RAG architecture, vector databases, embeddings, and semantic search. Developed practical skills in implementing AI solutions for real-world applications.</p>
-      </div>
-      <div class="achievement-item">
-        <strong>Database Management</strong>
-        <p>Mastered Upstash Vector database administration, optimization techniques, and integration with AI systems for efficient data retrieval.</p>
-      </div>
-      <div class="achievement-item">
-        <strong>Full-Stack Development</strong>
-        <p>Enhanced skills in Next.js, Python backend development, API integration, and creating responsive, user-friendly interfaces.</p>
-      </div>
-      <div class="achievement-item">
-        <strong>Data Analysis & Processing</strong>
-        <p>Applied Python, Pandas, NumPy, and scikit-learn to process complex datasets and extract meaningful insights for career guidance.</p>
-      </div>
-      <div class="achievement-item">
-        <strong>Problem-Solving & Innovation</strong>
-        <p>Developed ability to architect complex AI systems, troubleshoot technical challenges, and create innovative solutions to career development problems.</p>
+      <h2>📬 Get In Touch</h2>
+      <p class="section-subtitle">Let's connect and collaborate</p>
+      <div class="contact-grid">
+        <a href="mailto:catherinedalafu@spup.edu.ph" class="contact-card">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <h4>Email</h4>
+          <p>catherinedalafu@spup.edu.ph</p>
+        </a>
+        <a href="https://github.com/gitdev-kat" target="_blank" class="contact-card">
+          <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          <h4>GitHub</h4>
+          <p>gitdev-kat</p>
+        </a>
+        <a href="https://www.linkedin.com/in/catherine-dalafu-680548377" target="_blank" class="contact-card">
+          <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          <h4>LinkedIn</h4>
+          <p>Catherine Dalafu</p>
+        </a>
+        <a href="tel:09670912142" class="contact-card">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <h4>Phone</h4>
+          <p>09670912142</p>
+        </a>
       </div>
     </section>
-
-    <section class="section">
-      <h2>🚀 Project Impact & Results</h2>
-      <ul class="features-list">
-        <li>Successfully implemented a production-ready RAG-based AI career assistant</li>
-        <li>Achieved fast response times (&lt; 2 seconds) through Groq API integration</li>
-        <li>Created a scalable architecture capable of handling multiple concurrent users</li>
-        <li>Demonstrated practical application of OJT learnings from AusBiz Consulting</li>
-        <li>Built a portfolio-ready project showcasing full-stack AI development capabilities</li>
-        <li>Developed a tool that can genuinely help job seekers and professionals in career advancement</li>
-      </ul>
-    </section>
-
-    <section class="section demo-section">
-      <h2>🌟 Explore CatheTwin</h2>
-      <p style="margin-bottom: 1rem; font-size: 1.1rem;">Experience the AI career assistant and connect with me:</p>
-      <a href="/chat" class="demo-button">💬 Chat with CatheTwin AI</a>
-      <a href="https://github.com/gitdev-kat" class="demo-button" target="_blank">View GitHub Profile</a>
-      <a href="https://www.linkedin.com/in/catherine-dalafu-680548377" class="demo-button" target="_blank">Connect on LinkedIn</a>
-    </section>
-
-    <section class="section">
-      <h2>📝 Reflection & Conclusion</h2>
-      <p class="intro-text">
-        CatheTwin represents the practical application of everything I learned during my internship at AusBiz Consulting. By combining Upstash Vector database management, Groq API integration, and advanced data processing techniques with Python, I've created an AI-powered solution that addresses a real-world need in career development.
-      </p>
-      <p class="intro-text">
-        The project demonstrates not only my technical proficiency in AI/ML technologies but also my ability to conceptualize, design, and implement complex systems from the ground up. Through this OJT project, I've gained invaluable experience in full-stack development, AI system architecture, and creating user-centric applications that deliver tangible value.
-      </p>
-      <p class="intro-text">
-        As I prepare to graduate from St. Paul University Philippines in June 2026, this project serves as a strong foundation for my career in software engineering and AI development. It showcases my readiness to contribute meaningfully to innovative technology projects and my commitment to continuous learning and growth in the field.
-      </p>
-    </section>
-
-    <footer>
-      <p><strong>Catherine Dalafu</strong></p>
-      <p>BS Information Technology | St. Paul University Philippines</p>
-      <p>Tuguegarao City, Cagayan</p>
-      <p style="margin-top: 1rem;">© 2025 CatheTwin by Catherine Dalafu | Built with passion for AI and innovation</p>
-    </footer>
   </div>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>Catherine Dalafu</strong></p>
+    <p>BS Information Technology | Saint Paul University Philippines</p>
+    <p>Tuguegarao City, Cagayan</p>
+    <p style="margin-top: 1.5rem; opacity: 0.6;">© 2025 CatheTwin • Built with 💜 and AI</p>
+  </footer>
 </body>
 </html>
