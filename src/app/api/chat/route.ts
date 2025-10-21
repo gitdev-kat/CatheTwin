@@ -82,7 +82,7 @@ function buildContext(query: string, documents: Document[]): string {
   const matches = searchProfile(query, documents)
   
   if (matches.length === 0) {
-    return "No specific information found in Catherine's profile."
+    return "No specific information found in Catherine&apos;s profile."
   }
 
   const contextParts: string[] = []
@@ -110,11 +110,11 @@ export async function POST(request: NextRequest) {
     const messageLower = message.toLowerCase().trim()
     if (greetings.includes(messageLower)) {
       const greetingResponses = [
-        "Hello! Catherine's having a productive day working on her digital twin project. She's been fine-tuning the RAG architecture and optimizing the vector database queries. How can I help you learn more about her?",
-        "Hi there! Catherine spent her morning debugging some Python code and attending a JPCS meeting this afternoon. She's always excited to talk about AI and web development. What would you like to know?",
-        "Hey! Catherine's been busy today with her coursework and student government duties. She just finished optimizing the chatbot's response time. Feel free to ask about her skills, projects, or experience!",
-        "Hello! It's been a great day for Catherine - she's been working on enhancing this AI assistant and practicing for upcoming interviews. What can I tell you about her background?",
-        "Hi! Catherine's day has been filled with coding and collaboration. She's been exploring new features for CatheTwin while balancing her leadership roles at SPUP. What would you like to know about her?"
+        "Hello! Catherine&apos;s having a productive day working on her digital twin project. She&apos;s been fine-tuning the RAG architecture and optimizing the vector database queries. How can I help you learn more about her?",
+        "Hi there! Catherine spent her morning debugging some Python code and attending a JPCS meeting this afternoon. She&apos;s always excited to talk about AI and web development. What would you like to know?",
+        "Hey! Catherine&apos;s been busy today with her coursework and student government duties. She just finished optimizing the chatbot&apos;s response time. Feel free to ask about her skills, projects, or experience!",
+        "Hello! It&apos;s been a great day for Catherine - she&apos;s been working on enhancing this AI assistant and practicing for upcoming interviews. What can I tell you about her background?",
+        "Hi! Catherine&apos;s day has been filled with coding and collaboration. She&apos;s been exploring new features for CatheTwin while balancing her leadership roles at SPUP. What would you like to know about her?"
       ]
       const randomGreeting = greetingResponses[Math.floor(Math.random() * greetingResponses.length)]
       return NextResponse.json({ response: randomGreeting })
@@ -125,7 +125,7 @@ export async function POST(request: NextRequest) {
     
     if (documents.length === 0) {
       return NextResponse.json({
-        response: "I'm sorry, I couldn't load my profile data. Please make sure the digitaltwin.json file is properly configured."
+        response: "I&apos;m sorry, I couldn&apos;t load my profile data. Please make sure the digitaltwin.json file is properly configured."
       })
     }
 
@@ -136,9 +136,9 @@ export async function POST(request: NextRequest) {
         if (!process.env.GROQ_API_KEY) {
           // Fallback to basic response
           return NextResponse.json({
-            response: context === "No specific information found in Catherine's profile."
-              ? "I don't have specific information about that in Catherine's profile. You can ask about her work experience, technical skills, education, or leadership roles."
-              : `Based on Catherine's profile:\n\n${context}\n\nWould you like to know more about any specific aspect of her background?`
+            response: context === "No specific information found in Catherine&apos;s profile."
+              ? "I don&apos;t have specific information about that in Catherine&apos;s profile. You can ask about her work experience, technical skills, education, or leadership roles."
+              : `Based on Catherine&apos;s profile:\n\n${context}\n\nWould you like to know more about any specific aspect of her background?`
           })
         }    // Build messages for Groq
     const messages: Array<{ role: string; content: string }> = [
@@ -180,8 +180,8 @@ Catherine has experience with Python, MySQL, Laravel, NodeJS, and React, with ov
 
 You might also want to ask:
 • What projects has Catherine worked on?
-• What was Catherine's role at AusBiz Consulting?
-• What are Catherine's leadership experiences?`
+• What was Catherine&apos;s role at AusBiz Consulting?
+• What are Catherine&apos;s leadership experiences?`
       }
     ]
 
@@ -197,7 +197,7 @@ You might also want to ask:
     // Add current question with context
     messages.push({
       role: 'user',
-      content: `Context from Catherine's profile:\n${context}\n\nQuestion: ${message}`
+      content: `Context from Catherine&apos;s profile:\n${context}\n\nQuestion: ${message}`
     })
 
     // Generate AI response
