@@ -177,34 +177,34 @@ export default function CatheTwinChat() {
                 <div>
                   <h2 className="text-3xl font-bold text-slate-800 mb-3">Welcome to CatheTwin</h2>
                   <p className="text-slate-600">
-                    I'm Catherine Dalafu's AI Digital Twin. Ask me about her technical skills, 
+                    I&apos;m Catherine Dalafu&apos;s AI Digital Twin. Ask me about her technical skills, 
                     leadership experience, projects, or education background.
                   </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-4">
                   <button
-                    onClick={() => setInput("Tell me about Catherine's technical skills")}
+                    onClick={() => setInput("Tell me about Catherine&apos;s technical skills")}
                     className="p-4 border border-slate-200 hover:border-blue-500 hover:bg-blue-50 rounded-xl text-left transition-all group"
                   >
                     <div className="text-sm font-medium text-slate-800 group-hover:text-blue-600">Technical Skills</div>
                     <div className="text-xs text-slate-500 mt-1">Learn about programming and technologies</div>
                   </button>
                   <button
-                    onClick={() => setInput("What are Catherine's leadership roles?")}
+                    onClick={() => setInput("What are Catherine&apos;s leadership roles?")}
                     className="p-4 border border-slate-200 hover:border-blue-500 hover:bg-blue-50 rounded-xl text-left transition-all group"
                   >
                     <div className="text-sm font-medium text-slate-800 group-hover:text-blue-600">Leadership Experience</div>
                     <div className="text-xs text-slate-500 mt-1">Explore leadership positions and roles</div>
                   </button>
                   <button
-                    onClick={() => setInput("Describe Catherine's work experience")}
+                    onClick={() => setInput("Describe Catherine&apos;s work experience")}
                     className="p-4 border border-slate-200 hover:border-blue-500 hover:bg-blue-50 rounded-xl text-left transition-all group"
                   >
                     <div className="text-sm font-medium text-slate-800 group-hover:text-blue-600">Work Experience</div>
                     <div className="text-xs text-slate-500 mt-1">View internships and projects</div>
                   </button>
                   <button
-                    onClick={() => setInput("Tell me about Catherine's education")}
+                    onClick={() => setInput("Tell me about Catherine&apos;s education")}
                     className="p-4 border border-slate-200 hover:border-blue-500 hover:bg-blue-50 rounded-xl text-left transition-all group"
                   >
                     <div className="text-sm font-medium text-slate-800 group-hover:text-blue-600">Education</div>
